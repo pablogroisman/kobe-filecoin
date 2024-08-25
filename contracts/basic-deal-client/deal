@@ -1,0 +1,22 @@
+  const DealRequestStruct = [
+    "baga6ea4seaqhf7yxiwh5uf5l7rqthda24rwemgn3yay65datz2jj5hsc4baigjy", // pieceCID (Generated in previous step)
+    268435456, // pieceSize (Generated in previous step)
+    false, // verifiedDeal (whether the deal has datacap or not)
+    "bafybeifd4hwnfn7n27zexq4i7mz33y4i4f5zxxztpvz7s2jnrsqvk6y7ti", // DataCID (generated in previous step)
+    1520000, // startEpoch (when you want the storage to start)
+    2555200, // endEpoch (when you want the storage to end)
+    0, // storagePricePerEpoch (how much attoFIL per GiB per 30s you are offering for this deal, set to 0 for a free deal)
+    0, // providerCollateral (how much collateral the provider must put up for the deal)
+    0, // clientCollateral (how much collateral you, the client, must put up for the deal)
+    1, // extraParamsVersion (set to 1)
+    extraParamsV1, // see below
+  ];
+
+    const extraParamsV1 = [
+    "https://bafybeibyzpaeirhwkw27yammh4wvra4r2zi7gkp7uuiafto7hfsc26wssi.ipfs.w3s.link/ipfs/bafybeibyzpaeirhwkw27yammh4wvra4r2zi7gkp7uuiafto7hfsc26wssi/baga6ea4seaqhf7yxiwh5uf5l7rqthda24rwemgn3yay65datz2jj5hsc4baigjy.car", // carLink (Generated in previous step)
+    0, // carSize (Generated in previous step).
+    false, // skipIpniAnnounce (whether or not the deal should be announced to IPNI indexers, set to false)
+    false, // removeUnsealedCopy (whether or not the storage provider should remove an unsealed copy. Set to false)
+  ];
+
+//  yarn hardhat make-deal-proposal --contract 0x41e68a2f5D32c64a0ad8ccA401f446924cC785b7 --piece-cid baga6ea4seaqhf7yxiwh5uf5l7rqthda24rwemgn3yay65datz2jj5hsc4baigjy --piece-size 268435456 --verified-deal false --label "baga6ea4seaqhf7yxiwh5uf5l7rqthda24rwemgn3yay65datz2jj5hsc4baigjy" --start-epoch 520000 --end-epoch 1555200 --storage-price-per-epoch 0 --provider-collateral 0 --client-collateral 0 --extra-params-version 1 --location-ref "https://bafybeibyzpaeirhwkw27yammh4wvra4r2zi7gkp7uuiafto7hfsc26wssi.ipfs.w3s.link/ipfs/bafybeibyzpaeirhwkw27yammh4wvra4r2zi7gkp7uuiafto7hfsc26wssi/baga6ea4seaqhf7yxiwh5uf5l7rqthda24rwemgn3yay65datz2jj5hsc4baigjy.car" --car-size 0 --skip-ipni-announce false --remove-unsealed-copy false
